@@ -7,13 +7,79 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="navbar"></div>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="">Reports</a></li>
+            <li><a href="">Income</a></li>
+            <li><a href="">Expenses</a></li>
+            <li><a href="">Contact Us</a></li>
+
+        </ul>
+    </nav>
+
     <div id="main-div">
         <div id="api-holder">
 
         </div>
+        <div id="activities">
+
+
+        </div>
         <div id="reports">
+            <div id="income">
+                <div id="output-incomes">
+
+                </div>
+                <form>
+                    <h4>INCOME</h4>
+                    <label for="date">DATE: </label>
+                    <input type="date" name="date" id="date"></br>
+                    <label for="Description">Description</label></br>
+                    <textarea name="Description" id="Description" cols="21" rows="2"></textarea></br>
+                    <label for="Amount">Amount</label></br>
+                    <input type="number" name="amount" id="amount"></br>
+                    <button type="submit">ADD INCOME</button></br>
+
+                </form>
+                
+
+            </div>
+            <div id="expenses">
+                <div id="expenses">
+
+                </div>
+                <form>
+                    <h4>EXPENSES</h4>
+                    <label for="date">DATE:</label>
+                    <input type="date" name="date"id="date"></br>
+                    <label for="Description">Description:</label></br>
+                    <textarea name="Description" id="Description" cols="21" rows="2"></textarea></br>
+                    <label for="Amount">Amount:</label></br>
+                    <input type="number" name="amount" id="amount"></br>
+                    <button type="submit">ADD EXPENSES</button></br>
+
+                </form>
+                    
+
+            </div>
             
         </div>
+        <section>
+        <div id="contact-us">
+            <h3>Contact Us</h3>
+            <form>
+                <label for="name">Name: </label></br>
+                <input type="text" name="name" id="name" placeholder="Name"></br>
+                <label for="email">Email:</label></br>
+                <input type="text" name="email" id="email" placeholder="Email"></br>
+                <textarea name="Message" id="message" cols="21" rows="3" placeholder="Message"></textarea></br>
+                <button type="submit">Send Message </button>
+            </form>
+        </div>
+            
+        </section>
     </div>
     
 </body>
