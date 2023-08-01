@@ -18,15 +18,47 @@
             </ul>
         </nav>
     </div>
-    
-
-    <div id="main-div">
-        <div id="api-holder">
-
-        </div>
-        <div id="activities">
+    <div id="input">
+        <div id="income">
+            <div id="appendIncomes">
+                <p>INCOME TRACKER</p>
+                <!--Output the expenses-->
+            </div>
           
+            <form id="income-form" action="">
+                <fieldset>
+                    <label for="date">DATE:</label></br>
+                <input type="date" name="date"id="date"></br>
+                <legend>INCOME</legend>
+                <label for="Description">Description:</label></br>
+                <textarea name="" id="" cols="21" rows="2"></textarea></br>
+                <label for="Amount">Amount:</label></br>
+                <input type="number" name="amount" id="amount"></br>
+                <button type="submit">ADD INCOME</button></br> 
+            </fieldset>
+            </form>
+
         </div>
+        
+        <div id="expense">
+            <div id="appendExpenses" >
+                <p>EXPENSES TRACKER</p>
+                <!--Output the EXPENSES-->
+            </div>
+             <form id="expenses">
+                <fieldset >
+                    <label for="date">DATE:</label></br>
+                    <input type="date" name="date"id="date"></br>
+                    <legend>EXPENSE</legend>
+                    <label for="Description">Description:</label></br>
+                    <textarea name="" id="" cols="21" rows="2"></textarea></br>
+                    <label for="Amount">Amount:</label></br>
+                    <input type="number" name="amount" id="amount"></br>
+                    <button type="submit">ADD EXPENSE</button></br>
+                </fieldset>
+            </form>
+        </div>
+      
     </div>
     <section id="footer">
         <footer>

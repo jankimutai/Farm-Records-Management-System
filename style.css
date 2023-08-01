@@ -44,22 +44,26 @@ button {
     border: none;
     border-radius: 4px;
 }
-#year{
-    align-self:center;
-    text-align: center;
+.footer-section{
+    display: flex;
 }#footer{
-    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 footer p {
     font-size: 15px;
 }
   
 #income,
-#expenses {
+#expense {
     display: inline-block;
     margin-right: 10px;
-    width: 47%;
+    width: 49%;
     text-align: center;
+}
+#input{
+    background: wheat;
 }
 
 
