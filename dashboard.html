@@ -11,10 +11,9 @@
     <nav>
         <ul>
             <li><a href="dashboard.html">Home</a></li>
-            <li><a href="">Reports</a></li>
-            <li><a href="">Income</a></li>
-            <li><a href="">Expenses</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
 
         </ul>
     </nav>
@@ -24,63 +23,81 @@
 
         </div>
         <div id="activities">
-
-
+          
         </div>
         <div id="reports">
-            <div id="income">
-                <div id="output-incomes">
+            <div id="income/expense">
+                <div id="income">
+                    <p>INCOME TRACKER</p>
+                     <!--Output the incomes-->
 
                 </div>
-                <form>
-                    <h4>INCOME</h4>
-                    <label for="date">DATE: </label>
-                    <input type="date" name="date" id="date"></br>
-                    <label for="Description">Description</label></br>
-                    <textarea name="Description" id="Description" cols="21" rows="2"></textarea></br>
-                    <label for="Amount">Amount</label></br>
-                    <input type="number" name="amount" id="amount"></br>
-                    <button type="submit">ADD INCOME</button></br>
-
-                </form>
-                
-
-            </div>
-            <div id="expenses">
-                <div id="expenses">
+                <div id="expense">
+                    <p>EXPENSE TRACKER</p>
+                    <!--Output the expenses-->
 
                 </div>
-                <form>
-                    <h4>EXPENSES</h4>
-                    <label for="date">DATE:</label>
-                    <input type="date" name="date"id="date"></br>
-                    <label for="Description">Description:</label></br>
-                    <textarea name="Description" id="Description" cols="21" rows="2"></textarea></br>
-                    <label for="Amount">Amount:</label></br>
-                    <input type="number" name="amount" id="amount"></br>
-                    <button type="submit">ADD EXPENSES</button></br>
-
-                </form>
-                    
-
             </div>
-            
         </div>
-        <section>
-        <div id="contact-us">
-            <h3>Contact Us</h3>
-            <form>
-                <label for="name">Name: </label></br>
-                <input type="text" name="name" id="name" placeholder="Name"></br>
-                <label for="email">Email:</label></br>
-                <input type="text" name="email" id="email" placeholder="Email"></br>
-                <textarea name="Message" id="message" cols="21" rows="3" placeholder="Message"></textarea></br>
-                <button type="submit">Send Message </button>
+        <div id="input">
+            <form id="income" action="">
+                <fieldset>
+                    <label for="date">DATE:</label></br>
+                <input type="date" name="date"id="date"></br>
+                <legend>INCOME</legend>
+                <label for="Description">Description:</label></br>
+                <textarea name="" id="" cols="21" rows="2"></textarea></br>
+                <label for="Amount">Amount:</label></br>
+                <input type="number" name="amount" id="amount"></br>
+                <button type="submit">ADD INCOME</button></br> 
+            </fieldset>
+            </form>
+            <form id="expenses">
+            <fieldset >
+                <label for="date">DATE:</label></br>
+                <input type="date" name="date"id="date"></br>
+                <legend>EXPENSE</legend>
+                <label for="Description">Description:</label></br>
+                <textarea name="" id="" cols="21" rows="2"></textarea></br>
+                <label for="Amount">Amount:</label></br>
+                <input type="number" name="amount" id="amount"></br>
+                <button type="submit">ADD EXPENSE</button></br>
+            </fieldset>
             </form>
         </div>
-            
-        </section>
+        <div>
+        
+        </div>
+        <div>
+
+        </div>
     </div>
+    <section id="footer">
+        <footer>
+            <p>Our system allows you to keep track of your farming operation anytime, anywhere. 
+                    You can easily keep good records of spray, chemicals, and all that was planted. 
+                    Our system is easy to use and saves you time and money.</p>
+            <div id="contact-us">
+                <h3>Contact Us</h3>
+                <form>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <label for="message">Message</label>
+                    <input type="text"name="Message"id="Message"placeholder="Message">
+                    <button type="submit">Send Message </button>
+                </form>
+            </div>
+            <div id="year">
+                
+                <p>&copy;2023 All Rights Reserved</p>
+            </div>
+
+        </footer>
+    </section>
+    
+    <script src="./index.js"></script>
     
 </body>
 </html>
