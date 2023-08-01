@@ -22,19 +22,19 @@
         <div id="income">
             <div id="appendIncomes">
                 <p>INCOME TRACKER</p>
-                <!--Output the expenses-->
+                <!--Output the income-->
             </div>
           
             <form id="income-form" action="">
                 <fieldset>
-                    <label for="date">DATE:</label></br>
-                <input type="date" name="date"id="date"></br>
+                    <label for="date">DATE:</label>
+                <input type="date" name="date"id="dateIncome"required>
                 <legend>INCOME</legend>
-                <label for="Description">Description:</label></br>
-                <textarea name="" id="" cols="21" rows="2"></textarea></br>
-                <label for="Amount">Amount:</label></br>
-                <input type="number" name="amount" id="amount"></br>
-                <button type="submit">ADD INCOME</button></br> 
+                <label for="Description">Description:</label>
+                <input type="text" name="decsc" id="descIncome">
+                <label for="Amount">Amount:</label>
+                <input type="number" name="amount" id="amountIncome" required>
+                <button type="submit" id="btnIncome">ADD INCOME</button>
             </fieldset>
             </form>
 
@@ -47,14 +47,14 @@
             </div>
              <form id="expenses">
                 <fieldset >
-                    <label for="date">DATE:</label></br>
-                    <input type="date" name="date"id="date"></br>
+                    <label for="date">DATE:</label>
+                    <input type="date" name="date"id="date">
                     <legend>EXPENSE</legend>
-                    <label for="Description">Description:</label></br>
-                    <textarea name="" id="" cols="21" rows="2"></textarea></br>
-                    <label for="Amount">Amount:</label></br>
-                    <input type="number" name="amount" id="amount"></br>
-                    <button type="submit">ADD EXPENSE</button></br>
+                    <label for="Description">Description:</label>
+                    <input type="text" name="decsc" id="descExpense">
+                    <label for="Amount">Amount:</label>
+                    <input type="number" name="amount" id="amount">
+                    <button type="submit">ADD EXPENSE</button>
                 </fieldset>
             </form>
         </div>
@@ -73,7 +73,7 @@
                     <input type="text" name="email" id="email" placeholder="Email">
                     <label for="message">Message</label>
                     <input type="text"name="Message"id="Message"placeholder="Message">
-                    <button type="submit">Send Message </button>
+                    <button type="submit" id="handleContact">Send Message </button>
                 </form>
             </div>
             <div id="year">

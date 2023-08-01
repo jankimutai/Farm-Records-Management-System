@@ -6,10 +6,15 @@
     height: 69vh;
     
 }
+#background{
+    /*background: url('https://cdn.pixabay.com/photo/2015/10/05/14/50/farm-972717_1280.jpg');*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 *{
     margin: 3px;
     font-size: 13pt;
-    font-family:'Times New Roman', Times, serif;
+    font:Montserrat;
 }
 nav {
     background-color: #f2f2f2;
@@ -53,17 +58,6 @@ button {
 }
 footer p {
     font-size: 15px;
-}
-  
-#income,
-#expense {
-    display: inline-block;
-    margin-right: 10px;
-    width: 49%;
-    text-align: center;
-}
-#input{
-    background: wheat;
 }
 
 
