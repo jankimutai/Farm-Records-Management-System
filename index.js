@@ -95,5 +95,47 @@ document.addEventListener('DOMContentLoaded',() => {
     }
     let formContact = document.getElementById('contact');
     formContact.addEventListener('submit',handleContact);
+    let inc = document.getElementById('income')
+    fetch('http://localhost:3000/transactions')
+    .then(response => response.json())
+    .then(data => {
+    let incomeSum = 0;
+    data.map(transaction => {
+      if (transaction.transaction === 'INCOME') {
+        let number = parseInt(transaction.amount);
+        incomeSum += number;
+        console.log(incomeSum);
+      }
+    });
+    const incomeSumElement = document.createElement('div');
+    incomeSumElement.textContent = `Total income: Ksh${incomeSum}`;
+    inc.appendChild(incomeSumElement);
+    let expe = document.getElementById('expense')
+    fetch('http://localhost:3000/transactions')
+    .then(response => response.json())
+    .then(data => {
+    let expenseSum = 0;
+    data.map(transaction => {
+      if (transaction.transaction === 'EXPENSE') {
+        let number = parseInt(transaction.amount);
+        expenseSum += number;
+        console.log(expenseSum);
+      }
+    });
+    const expenseSumElement = document.createElement('div');
+    expenseSumElement.textContent = `Total income: Ksh${expenseSum}`;
+    expe.appendChild(expenseSumElement);
+    let bal = document.getElementById('balance');
+    const balElement = document.createElement('div');
+    let balance = parseInt(incomeSum) - (expenseSum);
+    balElement.textContent = `Balance : ${balance}`;
+    console.log(balElement)
+    bal.appendChild(balElement);
+  });
+  });
+  
+  
+
 })
+  
 

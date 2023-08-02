@@ -123,6 +123,13 @@ table{
     background-color: #333;
     border-radius: 2%;
     color: #ddd;
+  }#app2{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  #income,#expense,#balance{
+    background: #45a049;
   }
 
 

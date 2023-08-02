@@ -69,6 +69,13 @@
       "description": "ITEM Purchase",
       "amount": "345",
       "id": 24
+    },
+    {
+      "date": "2023-08-10",
+      "transaction": "INCOME",
+      "description": "Milk Sales",
+      "amount": "20000",
+      "id": 25
     }
   ],
   "contact-messages": [
