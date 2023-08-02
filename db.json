@@ -1,89 +1,5 @@
 {
-  "landing-page-background": [
-    {
-      "url": "https://cdn.pixabay.com/photo/2015/10/05/14/50/farm-972717_1280.jpg"
-    }
-  ],
-  "images": [
-    {
-      "url": "https://pixabay.com/photos/sheep-animal-farm-mammal-rural-1822137/"
-    },
-    {
-      "url": "https://pixabay.com/photos/chicken-animal-poultry-farm-3741129/"
-    },
-    {
-      "url": "https://pixabay.com/photos/cow-lick-tongue-head-cow-head-1715829/"
-    },
-    {
-      "url": "https://pixabay.com/photos/tractor-rural-farm-countryside-385681/"
-    },
-    {
-      "url": "https://pixabay.com/photos/chicken-hen-animal-poultry-farm-3727097/"
-    },
-    {
-      "url": "https://pixabay.com/photos/geese-girl-dog-shepherd-herding-908291/"
-    },
-    {
-      "url": "https://www.pexels.com/photo/shallow-focus-photo-of-yellow-corns-872483/"
-    },
-    {
-      "url": "https://images.pexels.com/photos/2382665/pexels-photo-2382665.jpeg?auto=compress&cs=tinysrgb&w=1600"
-    },
-    {
-      "url": "https://www.pexels.com/photo/black-and-white-cow-on-green-grass-field-4919737/"
-    },
-    {
-      "url": "https://www.freepik.com/free-photo/tractor-agricultural-machine-cultivating-field_11137387.htm#query=farm&position=2&from_view=keyword&track=sph"
-    },
-    {
-      "url": "https://img.freepik.com/free-photo/front-view-corn-field-which-plants-have-reached-their-maximum-height_181624-28515.jpg?size=626&ext=jpg"
-    }
-  ],
-  "contact-messages": [],
-  "login-pass": [],
   "transactions": [
-    {
-      "date": "2023-08-01",
-      "transaction": "EXPENSE",
-      "description": "Milk Sales",
-      "amount": "123",
-      "id": 8
-    },
-    {
-      "date": "2023-08-01",
-      "transaction": "INCOME",
-      "description": "Milk Sales",
-      "amount": "123",
-      "id": 9
-    },
-    {
-      "date": "2023-07-31",
-      "transaction": "EXPENSE",
-      "description": "Milk Sales",
-      "amount": "123",
-      "id": 10
-    },
-    {
-      "date": "2023-08-01",
-      "transaction": "INCOME",
-      "description": "Milk Sales",
-      "amount": "123",
-      "id": 11
-    },
-    {
-      "date": "2023-08-01",
-      "transaction": "INCOME",
-      "description": "Meat Sales",
-      "amount": "123",
-      "id": 12
-    },
-    {
-      "date": "2023-08-01",
-      "transaction": "EXPENSE",
-      "description": "Milk Sales",
-      "amount": "1234",
-      "id": 13
-    },
     {
       "date": "2023-08-01",
       "transaction": "EXPENSE",
@@ -106,7 +22,7 @@
       "id": 17
     },
     {
-      "date": "2023-08-16",
+      "date": "2023-08-01",
       "transaction": "INCOME",
       "description": "Milk Sales",
       "amount": "123",
@@ -114,17 +30,65 @@
     },
     {
       "date": "2023-07-31",
-      "transaction": "EXPENSE",
+      "transaction": "INCOME",
       "description": "Milk Sales",
-      "amount": "123",
+      "amount": "2",
       "id": 19
     },
     {
-      "date": "2023-08-22",
+      "date": "2023-08-01",
+      "transaction": "INCOME",
+      "description": "Milk Sales",
+      "amount": "1234",
+      "id": 20
+    },
+    {
+      "date": "2023-08-09",
       "transaction": "EXPENSE",
       "description": "Milk Sales",
+      "amount": "2000",
+      "id": 21
+    },
+    {
+      "date": "2023-08-16",
+      "transaction": "INCOME",
+      "description": "Milk Sales",
       "amount": "123",
-      "id": 20
+      "id": 22
+    },
+    {
+      "date": "2023-08-03",
+      "transaction": "EXPENSE",
+      "description": "AI SERVICES",
+      "amount": "1500",
+      "id": 23
+    },
+    {
+      "date": "2023-08-14",
+      "transaction": "EXPENSE",
+      "description": "ITEM Purchase",
+      "amount": "345",
+      "id": 24
+    }
+  ],
+  "contact-messages": [
+    {
+      "name": "JAN",
+      "email": "jankimutai1806@gmail.com",
+      "message": "Test Message",
+      "id": 1
+    },
+    {
+      "name": "Bonie",
+      "email": "bonie@bonie.com",
+      "message": "Keisher said Hi",
+      "id": 2
+    },
+    {
+      "name": "JAN",
+      "email": "steve@steve.com",
+      "message": "Test Message",
+      "id": 3
     }
   ]
 }

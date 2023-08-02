@@ -19,26 +19,27 @@
     </div>
     <div id="input">
         <div id="transaction">
-            <div id="appendTransaction">
-                <h2>Transaction History</h2>
-                <!--Output the income-->
-            </div>
+            
         <div id="form-holder">
             <form id="income-form">
-                <label for="date">DATE:</label></br>
-                <input type="date" name="date"id="dateIncome"required></br>
-                <label for="Transaction Type">Transaction Type:</label></br>
+                <label for="date">DATE:</label>
+                <input type="date" name="date"id="dateIncome"required>
+                <label for="Transaction Type">Transaction Type:</label>
                 <select name="type" id="type">
                     <option value="INCOME">INCOME</option>
                     <option value="EXPENSE">EXPENSE</option>
                 </select></br>
-                <label for="Description">Description:</label></br>
-                <input type="text" name="description" id="desc"></br>
+                <label for="Description">Description:</label>
+                <input type="text" name="description" id="desc">
                 <label for="Amount">Amount:</label></br>
-                <input type="number" name="amount" id="amountIncome" required></br>
+                <input type="number" name="amount" id="amountIncome" required>
                 <input type="submit" value="Submit" id="btnIncome">
 
             </form>
+        </div>
+        <div id="appendTransaction">
+            <h2>Transaction History</h2>
+            <!--Output the income-->
         </div>
        
 
@@ -49,14 +50,14 @@
             
             <div id="contact-us">
                 
-                <form>
+                <form id="contact">
                     <h4>Send A Message</h4>
                     <label for="name">Name: </label>
-                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="text" name="name" id="nameContact" placeholder="Name">
                     <label for="email">Email:</label>
-                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="text" name="email" id="emailContact" placeholder="Email">
                     <label for="message">Message</label>
-                    <input type="text"name="Message"id="Message"placeholder="Message">
+                    <input type="text"name="Message"id="messageContact"placeholder="Message">
                     <button type="submit" id="handleContact">Send Message </button>
                 </form>
             </div>
@@ -76,8 +77,6 @@
 
         </footer>
     </section>
-    
     <script src="./index.js"></script>
-    
 </body>
 </html>
