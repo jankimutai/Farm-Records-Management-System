@@ -1,43 +1,89 @@
-function addEventListener1(){
-    let button = document.getElementById("btnIncome")
-    button.addEventListener('click',handleClickEvent);
-}
-addEventListener1();
-function handleClickEvent(e){
-    e.preventDefault()
+   
+function handleClickEvent(){
     let addIncomeDate = document.getElementById("dateIncome").value
-    let addIncomeDescription = document.getElementById('descIncome').value
+    let addTransaction = document.getElementById('type').value
     let addIncomeAmount = document.getElementById('amountIncome').value
-    let appendIncome = document.getElementById('appendIncomes')
+    let descr = document.getElementById('desc').value
+    const formData = {
+        date:addIncomeDate,
+        transaction: addTransaction,
+        description: descr,
+        amount:addIncomeAmount,
+    }
+    let config = {
+        method: "POST",
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(formData)
+    }
+    fetch('http://localhost:3000/transactions',config)
+    .then(resp => resp.json())
+    .then(data => {
+        let p = document.createElement('p')
+        p.innerHTML = `date: ${data.date} Transaction: ${data.transaction}Description: ${data.description} Amount: ${`Ksh:`,data.amount} `
+      
+    })
+    .catch(error => {
+        let p = document.createElement('')
+        p.textContent= error
+    }) 
+
+}
+function eventClick(){
     let form = document.getElementById('income-form')
-    // let addInc = document.createElement('div')
-    // addInc.innerHTML = 
-    // `<p>DATE:${addIncomeDate} Description:${addIncomeDescription}Amount:${addIncomeAmount }</p>`
-    // appendIncome.appendChild(addInc);   
-    form.reset()
+    form.addEventListener('submit',handleClickEvent);
 }
-function addEventListenerContactUs(){
-    let buttonContact = document.querySelector('handleContact"')
-    buttonContact.addEventListener('click', handleClickEventContact)
-}
-
-function handleClickEventContact(e){
-    e.preventDefault()
-    let email = document.getElementById('email')
-    let name = document.getElementById('name')
-    let message = document.getElementById('message')
-    fetch('http://localhost:3000/contact-messages')
-
-}
-addEventListenerContactUs()
-function saveLoginDetails(){
-    let email = document.querySelector('#emailogin').value;
-    let password =document.querySelector('#pass').value;
-    const dataObject = {
-        email: email,
-        password: password
-    };
-    fetch('http://localhost:3000/login-pass')
+eventClick();
 
 
+function fetchTransactions(){
+    fetch('http://localhost:3000/transactions')
+    .then(resp => resp.json())
+    .then(data=>transactions(data)) 
 }
+fetchTransactions();
+function transactions(data){
+    let appendIncome = document.getElementById('appendTransaction')
+    data.map(i=>{
+        //let button = document.createElement('button')
+        let transaction = document.createElement("table");
+        transaction.className = 'appendJson'
+        let button = document.createElement('button')
+        button.textContent="Delete Record"
+        button.className="delBTN"
+    
+        transaction.innerHTML = 
+        `
+        <tr>
+        <td>Date: ${i.date}</td>
+        <td>Transaction: ${i.transaction}</td>
+        <td>Description: ${i.description}</td>
+        <td>Amount:  Ksh${i.amount}</td>
+        </tr>
+        `
+        transaction.append(button)
+        appendIncome.appendChild(transaction);
+        // button.addEventListener('click',()=>{
+        //     deleteEvent(i.id);
+        // })
+    }) 
+    function deleteEvent(id){
+    fetch(`http://localhost:3000/transactions/${id}`,{
+        method:"DELETE",
+        headers:{
+            "Content-Type":"application/json"
+        }
+
+    })
+    .then(resp => resp.json())
+    .then((trans)=> console.log(trans))
+}
+}
+
+
+
+
+
+
+

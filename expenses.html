@@ -12,53 +12,37 @@
             <ul>
                 <li><a href="dashboard.html">Home</a></li>
                 <li><a href="expenses.html">Expenses</a></li>
-                <li><a href="#activities">Activities</a></li>
+                <li><a href="activities.html">MY BLOG</a></li>
                 <li><a href="#contact-us">Contact Us</a></li>
-    
             </ul>
         </nav>
     </div>
     <div id="input">
-        <div id="income">
-            <div id="appendIncomes">
-                <p>INCOME TRACKER</p>
+        <div id="transaction">
+            <div id="appendTransaction">
+                <h2>Transaction History</h2>
                 <!--Output the income-->
             </div>
-          
-            <form id="income-form" action="">
-                <fieldset>
-                    <label for="date">DATE:</label>
-                <input type="date" name="date"id="dateIncome"required>
-                <legend>INCOME</legend>
-                <label for="Description">Description:</label>
-                <input type="text" name="decsc" id="descIncome">
-                <label for="Amount">Amount:</label>
-                <input type="number" name="amount" id="amountIncome" required>
-                <button type="submit" id="btnIncome">ADD INCOME</button>
-            </fieldset>
-            </form>
+        <div id="form-holder">
+            <form id="income-form">
+                <label for="date">DATE:</label></br>
+                <input type="date" name="date"id="dateIncome"required></br>
+                <label for="Transaction Type">Transaction Type:</label></br>
+                <select name="type" id="type">
+                    <option value="INCOME">INCOME</option>
+                    <option value="EXPENSE">EXPENSE</option>
+                </select></br>
+                <label for="Description">Description:</label></br>
+                <input type="text" name="description" id="desc"></br>
+                <label for="Amount">Amount:</label></br>
+                <input type="number" name="amount" id="amountIncome" required></br>
+                <input type="submit" value="Submit" id="btnIncome">
 
-        </div>
-        
-        <div id="expense">
-            <div id="appendExpenses" >
-                <p>EXPENSES TRACKER</p>
-                <!--Output the EXPENSES-->
-            </div>
-             <form id="expenses">
-                <fieldset >
-                    <label for="date">DATE:</label>
-                    <input type="date" name="date"id="date">
-                    <legend>EXPENSE</legend>
-                    <label for="Description">Description:</label>
-                    <input type="text" name="decsc" id="descExpense">
-                    <label for="Amount">Amount:</label>
-                    <input type="number" name="amount" id="amount">
-                    <button type="submit">ADD EXPENSE</button>
-                </fieldset>
             </form>
         </div>
-      
+       
+
+        </div> 
     </div>
     <section id="footer">
         <footer>
@@ -77,6 +61,7 @@
                 </form>
             </div>
             <div id="year">
+                
                 
                 <div class="footer-section">
                     <h3>Contact Details: </h3>
