@@ -111,6 +111,20 @@
       "description": "RENOVATIONS",
       "amount": "40000",
       "id": 36
+    },
+    {
+      "date": "2023-08-22",
+      "transaction": "INCOME",
+      "description": "ITEM Purchase",
+      "amount": "322",
+      "id": 37
+    },
+    {
+      "date": "2023-08-07",
+      "transaction": "EXPENSE",
+      "description": "AI SERVICES",
+      "amount": "123",
+      "id": 38
     }
   ],
   "contact-messages": [

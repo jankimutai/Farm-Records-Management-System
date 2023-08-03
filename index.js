@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded',() => {
-    function handleClickEvent(event){
+window.addEventListener('DOMContentLoaded',() => {
+  const formIncome = document.getElementById('income-form');
+    function handleClickEvent(event) {
         event.preventDefault()
         let addIncomeDate = document.getElementById("dateIncome").value;
         let addTransaction = document.getElementById('type').value;
@@ -27,9 +28,9 @@ document.addEventListener('DOMContentLoaded',() => {
         });
     
     }
-  
-    const formIncome = document.getElementById('income-form');
-    formIncome.addEventListener('submit',handleClickEvent);
+    if (formIncome) {
+      formIncome.addEventListener('submit', handleClickEvent);
+    }
     function fetchTransactions(){
         fetch('http://localhost:3000/transactions')// fetch request
         .then(resp => resp.json())
@@ -55,7 +56,11 @@ document.addEventListener('DOMContentLoaded',() => {
             </tr>
             `;
             transaction.append(button);
-            appendIncome.appendChild(transaction);
+            if(appendIncome){
+              appendIncome.appendChild(transaction);
+
+            }
+            
             button.addEventListener('click',()=>{
                 deleteEvent(i.id);
             });
@@ -93,7 +98,11 @@ document.addEventListener('DOMContentLoaded',() => {
         .then(data=>console.lo(data));
     }
     let formContact = document.getElementById('contact');
-    formContact.addEventListener('submit',handleContact);
+    if(formContact){
+      formContact.addEventListener('submit',handleContact);
+
+    }
+    
     let inc = document.getElementById('income')
     fetch('http://localhost:3000/transactions')
     .then(response => response.json())
@@ -108,7 +117,10 @@ document.addEventListener('DOMContentLoaded',() => {
     });
     const incomeSumElement = document.createElement('div');
     incomeSumElement.textContent = `Total income: Ksh ${incomeSum}`;
-    inc.appendChild(incomeSumElement);
+    if(inc){
+      inc.appendChild(incomeSumElement);
+    }
+    
     let expe = document.getElementById('expense')
     fetch('http://localhost:3000/transactions')
     .then(response => response.json())
@@ -123,18 +135,23 @@ document.addEventListener('DOMContentLoaded',() => {
     });
     const expenseSumElement = document.createElement('div');
     expenseSumElement.textContent = `Total Expenses: Ksh ${expenseSum}`;
-    expe.appendChild(expenseSumElement);
+    if(expe){
+      expe.appendChild(expenseSumElement);
+    }
+    
     let bal = document.getElementById('balance');
     const balElement = document.createElement('div');
     let balance = parseInt(incomeSum) - (expenseSum);
     balElement.textContent = `Balance : Ksh ${balance}`;
-    console.log(balElement)
-    bal.appendChild(balElement);
-    
-
+    console.log(balElement);
+    if(bal){
+      bal.appendChild(balElement);
+    }
     //generating a chart
-    const ctx = document.getElementById('myChart').getContext('2d');
-    new Chart(ctx, {
+    const ctx = document.getElementById('myChart')
+    if(ctx){
+      ctx.getContext('2d');
+      new Chart(ctx, {
         type: 'doughnut',
         data: {
           labels: ['Income', 'Expense'],color:'white',
@@ -171,14 +188,10 @@ document.addEventListener('DOMContentLoaded',() => {
             },
           },
         },
-    });
-
-
+      });
+    }
   });
   });
-  
-  
-
 })
   
 

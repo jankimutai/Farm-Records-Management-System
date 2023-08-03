@@ -124,23 +124,33 @@ input[type="date"],
     text-align: center;
     margin-top: 3px;
     padding: auto;
+    font-weight: bold;
   }
   #income,#expense,#balance{
-    margin: 20px;
-    padding: 10px;
+    margin: 23px;
+    padding: 7px;
     background-color: #04AA6D;
    
 
   }
   #chatHolder{
     width: 50%;
-    height: 600px;
+    height: 480px;
     padding: 2%;
     
   }
   #app2{
     display:flex;
-    background:#333;
+    background:#2B2B2B;
+  }
+  #income{
+    background-color: #1C4E80;
+    align-items: center;
+
+  }
+  #expense{
+    background-color: #EA6A47;
+
   }
 
  
