@@ -1,7 +1,8 @@
-window.addEventListener('DOMContentLoaded',() => {
+document.addEventListener('DOMContentLoaded',(event) => {
+  event.preventDefault();
   const formIncome = document.getElementById('income-form');
     function handleClickEvent(event) {
-        event.preventDefault()
+        event.preventDefault();
         let addIncomeDate = document.getElementById("dateIncome").value;
         let addTransaction = document.getElementById('type').value;
         let addIncomeAmount = document.getElementById('amountIncome').value;
@@ -78,6 +79,39 @@ window.addEventListener('DOMContentLoaded',() => {
         .then((transaction)=> alert('deleted'));
     }
     };
+    function handleLogin(){
+      let email1 = document.getElementById("email").value;
+      let password1 = document.getElementById('pass').value;
+       // Create a JSON object with the credentials
+      const authenticate = {
+        email:email1,
+        password:password1
+      }
+       // Create a fetch configuration object
+      const configLogin = {
+        method:"POST",
+        headers: {
+          "Content-Type":"application/json",
+        },
+        body:JSON.stringify(authenticate)
+        
+      }
+      // Make the fetch request
+      fetch('http://localhost:3000/users',configLogin)
+      .then(resp => resp.json())
+      .then(data => {
+        if (data.success) {
+          console.log('Login successful!');
+        } else {
+          console.log('Login failed.');
+        }
+      });;
+    }
+      let formLogin = document.getElementById('login-form');
+      if(formLogin){
+        formLogin.addEventListener('submit',handleLogin);
+      }
+  
     function handleContact(){
         let name = document.getElementById('nameContact').value
         let email = document.getElementById('emailContact').value
@@ -96,12 +130,11 @@ window.addEventListener('DOMContentLoaded',() => {
         };
         fetch('http://localhost:3000/contact-messages', config)
         .then(res => res.json())
-        .then(data=>console.lo(data));
+        .then(data=>console.log(data));
     }
     let formContact = document.getElementById('contact');
     if(formContact){
       formContact.addEventListener('submit',handleContact);
-
     }
     
     let inc = document.getElementById('income')
