@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded',() => {
       }
     });
     const incomeSumElement = document.createElement('div');
-    incomeSumElement.textContent = `Total income: Ksh${incomeSum}`;
+    incomeSumElement.textContent = `Total income: Ksh ${incomeSum}`;
     inc.appendChild(incomeSumElement);
     let expe = document.getElementById('expense')
     fetch('http://localhost:3000/transactions')
@@ -122,12 +122,12 @@ document.addEventListener('DOMContentLoaded',() => {
       }
     });
     const expenseSumElement = document.createElement('div');
-    expenseSumElement.textContent = `Total Expenses: Ksh${expenseSum}`;
+    expenseSumElement.textContent = `Total Expenses: Ksh ${expenseSum}`;
     expe.appendChild(expenseSumElement);
     let bal = document.getElementById('balance');
     const balElement = document.createElement('div');
     let balance = parseInt(incomeSum) - (expenseSum);
-    balElement.textContent = `Balance : ${balance}`;
+    balElement.textContent = `Balance : Ksh ${balance}`;
     console.log(balElement)
     bal.appendChild(balElement);
     
@@ -135,34 +135,36 @@ document.addEventListener('DOMContentLoaded',() => {
     //generating a chart
     const ctx = document.getElementById('myChart').getContext('2d');
     new Chart(ctx, {
-        type: 'pie',
+        type: 'doughnut',
         data: {
-          labels: ['Income', 'Expense'],
+          labels: ['Income', 'Expense'],color:'white',
           datasets: [{
             label: 'Total Amount',
             data: [incomeSum, expenseSum],
-            backgroundColor: ["#418AF2","RED"
+            backgroundColor: ["#1C4E80","#EA6A47"
               //'rgba(54, 162, 235, 0.2)',
               //'rgba(255, 99, 132, 0.2)',
             ],
-            borderColor: [
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 99, 132, 1)',
+            borderColor: ['none'
+              //'rgba(54, 162, 235, 1)',
+              //'rgba(255, 99, 132, 1)',
             ],
-            borderWidth: 1,
+            borderWidth: 0,
           }],
         },
         options: {
           responsive: true,
           plugins: {
             legend: {
-              position: 'top',
+              position: 'bottom',
+              color:'white',
+              backgroundColor:'white',
             },
             title: {
               display: true,
-              text: 'Income vs Expense',
+              text: 'Income vs Expense',color:'white',
               font: {
-                size: 21,
+                size: '30pt',
                 weight: 'bold',
                 family: 'Arial, sans-serif',
               }
