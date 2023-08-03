@@ -76,6 +76,62 @@
       "description": "Milk Sales",
       "amount": "20000",
       "id": 25
+    },
+    {
+      "date": "2023-08-30",
+      "transaction": "EXPENSE",
+      "description": "ITEM Purchase",
+      "amount": "5000",
+      "id": 26
+    },
+    {
+      "date": "2023-08-01",
+      "transaction": "EXPENSE",
+      "description": "AI SERVICES",
+      "amount": "2000",
+      "id": 27
+    },
+    {
+      "date": "2023-08-04",
+      "transaction": "EXPENSE",
+      "description": "ITEM Purchase",
+      "amount": "200",
+      "id": 28
+    },
+    {
+      "date": "2023-07-30",
+      "transaction": "EXPENSE",
+      "description": "Labor Costs",
+      "amount": "123",
+      "id": 29
+    },
+    {
+      "date": "2022-10-21",
+      "transaction": "EXPENSE",
+      "description": "Milk Sales",
+      "amount": "123",
+      "id": 30
+    },
+    {
+      "date": "2023-07-31",
+      "transaction": "EXPENSE",
+      "description": "labour",
+      "amount": "2000",
+      "id": 31
+    },
+    {
+      "date": "2023-07-31",
+      "transaction": "INCOME",
+      "description": "Milk Sales",
+      "amount": "2000",
+      "id": 32
+    },
+    {
+      "date": "2023-08-02",
+      "transaction": "EXPENSE",
+      "description": "ITEM Purchase",
+      "amount": "7000",
+      "id": 33
     }
   ],
   "contact-messages": [
@@ -96,6 +152,12 @@
       "email": "steve@steve.com",
       "message": "Test Message",
       "id": 3
+    },
+    {
+      "name": "BiN",
+      "email": "bin@bin.com",
+      "message": "Test Message",
+      "id": 4
     }
   ]
 }

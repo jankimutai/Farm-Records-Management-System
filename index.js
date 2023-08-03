@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded',() => {
-    const form = document.querySelector('#income-form');
     function handleClickEvent(event){
         event.preventDefault()
         let addIncomeDate = document.getElementById("dateIncome").value;
@@ -28,9 +27,9 @@ document.addEventListener('DOMContentLoaded',() => {
         });
     
     }
-
-        
-    form.addEventListener('submit',handleClickEvent);
+  
+    const formIncome = document.getElementById('income-form');
+    formIncome.addEventListener('submit',handleClickEvent);
     function fetchTransactions(){
         fetch('http://localhost:3000/transactions')// fetch request
         .then(resp => resp.json())
@@ -123,7 +122,7 @@ document.addEventListener('DOMContentLoaded',() => {
       }
     });
     const expenseSumElement = document.createElement('div');
-    expenseSumElement.textContent = `Total income: Ksh${expenseSum}`;
+    expenseSumElement.textContent = `Total Expenses: Ksh${expenseSum}`;
     expe.appendChild(expenseSumElement);
     let bal = document.getElementById('balance');
     const balElement = document.createElement('div');
@@ -131,6 +130,48 @@ document.addEventListener('DOMContentLoaded',() => {
     balElement.textContent = `Balance : ${balance}`;
     console.log(balElement)
     bal.appendChild(balElement);
+    
+
+    //generating a chart
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Income', 'Expense'],
+          datasets: [{
+            label: 'Total Amount',
+            data: [incomeSum, expenseSum],
+            backgroundColor: ["#418AF2","RED"
+              //'rgba(54, 162, 235, 0.2)',
+              //'rgba(255, 99, 132, 0.2)',
+            ],
+            borderColor: [
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 99, 132, 1)',
+            ],
+            borderWidth: 1,
+          }],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Income vs Expense',
+              font: {
+                size: 21,
+                weight: 'bold',
+                family: 'Arial, sans-serif',
+              }
+            },
+          },
+        },
+    });
+
+
   });
   });
   
