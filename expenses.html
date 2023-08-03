@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li><a href="dashboard.html">Home</a></li>
-                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="expenses.html">Transactions</a></li>
                 <li><a href="activities.html">MY BLOG</a></li>
                 <li><a href="#contact-us">Contact Us</a></li>
             </ul>
@@ -21,6 +21,11 @@
   
     <div id="input">
         <div id="transaction">
+            <div id="calculator">
+                <div id="income"></div>
+                <div id="expense"></div>
+                <div id="balance"></div>
+            </div>
             
         <div id="form-holder">
             <form id="income-form">
@@ -34,7 +39,7 @@
                 <label for="Description">Description:</label>
                 <input type="text" name="description" id="desc">
                 <label for="Amount">Amount:</label></br>
-                <input type="number" name="amount" id="amountIncome" required>
+                <input type="number" name="amount" id="amountIncome" required></br>
                 <input type="submit" value="Submit" id="btnIncome">
 
             </form>
@@ -47,38 +52,7 @@
 
         </div> 
     </div>
-    <section id="footer">
-        <footer>
-            
-            <div id="contact-us">
-                
-                <form id="contact">
-                    <h4>Send A Message</h4>
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" id="nameContact" placeholder="Name">
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" id="emailContact" placeholder="Email">
-                    <label for="message">Message</label>
-                    <input type="text"name="Message"id="messageContact"placeholder="Message">
-                    <button type="submit" id="handleContact">Send Message </button>
-                </form>
-            </div>
-            <div id="year">
-                
-                
-                <div class="footer-section">
-                    <h3>Contact Details: </h3>
-                    <p>Address: 230-30100, ELDORET</p>
-                    <p>Email: jankimutai@gmail.com</p>
-                    <p>Phone: +254725962171</p>
-                    <p>&copy;2023 All Rights Reserved</p>
-                  </div>
-                
-                
-            </div>
-
-        </footer>
-    </section>
+ 
    
     <script src="./index.js"></script>
 </body>

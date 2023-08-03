@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li><a href="dashboard.html">Home</a></li>
-                <li><a href="expenses.html">Expenses</a></li>
+                <li><a href="expenses.html">Transactions</a></li>
                 <li><a href="activities.html">MY BLOG</a></li>
                 <li><a href="#contact-us">Contact Us</a></li>
             </ul>
@@ -20,15 +20,48 @@
     <div id="bar">
         <h1>Hi Farmer Welcome back!</h1>
     </div>
-    <div id="app2">
-        <div id="chatHolder"><canvas id="myChart"></canvas></div>
-        <div id="calculator">
-            <div id="income"></div>
-            <div id="expense"></div>
-            <div id="balance"></div>
+        <div id="app2">
+            <div id="chatHolder"><canvas id="myChart"></canvas>
+            </div>
+            <div class="calculator">
+                <div id="income"></div>
+                <div id="expense"></div>
+                <div id="balance"></div>
+            </div>
+            
         </div>
-        
-    </div>
+    <section id="footer">
+        <footer>
+            
+            <div id="contact-us">
+                
+                <form id="contact">
+                    <h4>Send A Message</h4>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="nameContact" placeholder="Name">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="emailContact" placeholder="Email">
+                    <label for="message">Message</label>
+                    <input type="text"name="Message"id="messageContact"placeholder="Message"></br>
+                    <button type="submit" id="handleContact">Send Message </button>
+                </form>
+            </div>
+            <div id="year">
+                
+                
+                <div class="footer-section">
+                    <h3>Contact Details: </h3>
+                    <p>Address: 230-30100, ELDORET</p>
+                    <p>Email: jankimutai@gmail.com</p>
+                    <p>Phone: +254725962171</p>
+                    <p>&copy;2023 All Rights Reserved</p>
+                  </div>
+                
+                
+            </div>
+
+        </footer>
+    </section>
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./index.js"></script>
 </body>

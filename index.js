@@ -37,6 +37,7 @@ window.addEventListener('DOMContentLoaded',() => {
         .then(data=>transactions(data));
     }
     fetchTransactions();
+    
     function transactions(data){
         let appendIncome = document.getElementById('appendTransaction');
         data.map(i=>{

@@ -125,6 +125,27 @@
       "description": "AI SERVICES",
       "amount": "123",
       "id": 38
+    },
+    {
+      "date": "2023-08-03",
+      "transaction": "INCOME",
+      "description": "Milk Sales",
+      "amount": "1234",
+      "id": 39
+    },
+    {
+      "date": "2023-08-01",
+      "transaction": "EXPENSE",
+      "description": "Milk Sales",
+      "amount": "123",
+      "id": 40
+    },
+    {
+      "date": "2023-08-08",
+      "transaction": "EXPENSE",
+      "description": "Milk Sales",
+      "amount": "5000",
+      "id": 41
     }
   ],
   "contact-messages": [
@@ -163,6 +184,22 @@
       "email": "bin@bin.com",
       "message": "Message test",
       "id": 6
+    },
+    {
+      "name": "JAN",
+      "email": "jankimutai1806@gmail.com",
+      "message": "Test Message",
+      "id": 7
+    },
+    {
+      "name": "Alvin",
+      "email": "alvin@alvin.com",
+      "message": "Message test",
+      "id": 8
     }
+  ],
+  
+  "users": [
+    
   ]
 }
