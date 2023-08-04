@@ -11,7 +11,6 @@ The Farm Records App is a user-friendly application designed to help farmers kee
 5. Contact-Us form : The app features a form whereby farmers can leave messages to the current app developer as the app has not yet been deployed to the rightful administrator.
 
 # USAGE
-1. Fork and clone this repository
-2. 
+1 [FARM SYSTEM](https://phase1-project-liart.vercel.app/)
 
 
