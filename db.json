@@ -198,8 +198,21 @@
       "id": 8
     }
   ],
-  
   "users": [
-    
+    {
+      "email": "jankimutai1806@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "email": "jankimutai1806@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "email": "jankimutai1806@gmail.com",
+      "password": "test post",
+      "id": 3
+    }
   ]
 }
