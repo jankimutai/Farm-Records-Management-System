@@ -196,6 +196,12 @@
       "email": "alvin@alvin.com",
       "message": "Message test",
       "id": 8
+    },
+    {
+      "name": "JAN",
+      "email": "dcsticky1@gmail.com",
+      "message": "123",
+      "id": 9
     }
   ],
   "users": [
@@ -253,6 +259,11 @@
       "email": "jankimutai1806@gmail.com",
       "password": "1234",
       "id": 11
+    },
+    {
+      "email": "jankimutai1806@gmail.com",
+      "password": "12345",
+      "id": 12
     }
   ]
 }
