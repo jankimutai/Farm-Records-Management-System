@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded',(event) => {
     }
     if (formIncome) {
       formIncome.addEventListener('submit', handleClickEvent);
+      formIncome.reset();
+      location.reload();
     }
     function fetchTransactions(){
         fetch('http://localhost:3000/transactions')// fetch request
