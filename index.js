@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
             },
             body:JSON.stringify(formData)
         };
-        fetch('https://db-server-project.vercel.app/transactions',config)
+        fetch('http://localhost:3000/transactions',config)
         .then(resp => resp.json())
         .then(data => console.log(data))
         .catch(error => {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
       formIncome.addEventListener('submit', handleClickEvent);
     }
     function fetchTransactions(){
-        fetch('https://db-server-project.vercel.app/transactions')// fetch request
+        fetch('http://localhost:3000/transactions')// fetch request
         .then(resp => resp.json())
         .then(data=>transactions(data));
     }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
             });
         });
         function deleteEvent(id){
-        fetch(`https://db-server-project.vercel.app/transactions/${id}`,{
+        fetch(`http://localhost:3000/transactions/${id}`,{
             method:"DELETE",
             headers:{
                 "Content-Type":"application/json"
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
         
       }
       // Make the fetch request
-      fetch('https://db-server-project.vercel.app/users',configLogin)
+      fetch('http://localhost:3000/users',configLogin)
       .then(resp => resp.json())
       .then(data => {
         if (data.success) {
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
             },
             body:JSON.stringify(contact)
         };
-        fetch('https://db-server-project.vercel.app/contact-messages', config)
+        fetch('http://localhost:3000/contact-messages', config)
         .then(res => res.json())
         .then(data=>console.log(data));
     }
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
     }
     
     let inc = document.getElementById('income')
-    fetch('https://db-server-project.vercel.app/transactions')
+    fetch('http://localhost:3000/transactions')
     .then(response => response.json())
     .then(data => {
     let incomeSum = 0;
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded',(event) => {
     }
     
     let expe = document.getElementById('expense')
-    fetch('https://db-server-project.vercel.app/transactions')
+    fetch('http://localhost:3000/transactions')
     .then(response => response.json())
     .then(data => {
     let expenseSum = 0;
