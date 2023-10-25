@@ -11,7 +11,7 @@ The Farm Records App is a user-friendly application designed to help farmers kee
 5. Contact-Us form 
 
 
-## Live Demo : [FARM SYSTEM](https://phase1-project-liart.vercel.app/)
+## Live Demo : [FARM SYSTEM](https://farm-records-management-system-52irxp7k8-jankimutai.vercel.app/)
 # USAGE
 1. Login: Input random email and passwords as I have not implemented access controls
  ![image](https://github.com/jankimutai/phase1_Project/assets/125971278/504e70a6-94f3-41a6-ac37-fb65b87404c5)
